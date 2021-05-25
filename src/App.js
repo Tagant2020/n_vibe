@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Login from './components/loginInterface';
+import Application from './components/application';
 
 function App() {
+  let login = localStorage.getItem('login');
+  let pwd = localStorage.getItem('pwd');
+  let val = (login==='test@gmail.com' && pwd==='1234')?true:false;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {val===true ? <Application/> : <Login/>}
     </div>
   );
 }

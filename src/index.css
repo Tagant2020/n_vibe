@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bl {
+  border: 2px solid black;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+}
+.leaflet-container {
+  width: 95%;
+  height: 80vh;
+}
+
+.connexion{
+  margin-top: 15em;
+  margin-left: 45em;
+}
